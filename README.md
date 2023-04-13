@@ -126,7 +126,7 @@ The Kanban, as an agile project management tool, helped to visualize the tasks a
 
 ### Colour Scheme
 
-I have taken inspiration from the header image for the colour palette and chosen colours that complement each other.
+
 
 ![Colour Scheme for Titbit](documentation/###.png)
 
@@ -179,7 +179,7 @@ Wireframes were created for mobile, tablet and desktop using Balsamiq.
 
 ## Features
 
-The website is comprised of 12 pages which are extended from a base template.
+The website is comprised of X pages which are extended from a base template.
 
 * Home page
 * Login page
@@ -203,7 +203,7 @@ The website is comprised of 12 pages which are extended from a base template.
 
   ![User not logged in Navbar](documentation/not-loggedin-navbar.png)
 
-* Footer - A footer is displayed on all pages of the website and contains the copyright year, this is updated to the current year using [JavaScript](bookworm/static/js/script.js).
+* Footer - A footer is displayed on all pages of the website and contains the copyright year, this is updated to the current year using [JavaScript](titbit/static/js/script.js).
 
   ![Footer](documentation/footer.png)
 
@@ -271,7 +271,7 @@ HTML, CSS, Javascript, Python
 
 [Flask](https://pypi.org/project/Flask/) - A micro framework.
 
-[Bootstrap](https://getbootstrap.com/) - version 5.2.0 - CSS Framework.
+[Bootstrap](https://getbootstrap.com/) - version 5.2.3 - CSS Framework.
 
 ### Libraries & Packages Used
 
@@ -296,10 +296,6 @@ HTML, CSS, Javascript, Python
 
 [Shields.io](https://shields.io/) To add badges to the README.
 
-
-### Flask Blueprints
-
-I wanted to push myself a little with this project and decided that I would like to use Flask Blueprints. Flask Blueprints are a way of logically storing and organising similar routes of the app in their own section, rather than having one large file with all the routes of the app.
 
 
 ### Error Handling
@@ -326,7 +322,7 @@ To fork the repository:
 
 1. Log in (or sign up) to Github.
 
-2. Go to the repository for this project, [BookWorm](https://github.com/kera-cudmore/BookWorm).
+2. Go to the repository for this project, [Titbit](https://github.com/luandretta/titbit).
 
 3. Click the Fork button in the top right corner.
 
@@ -336,7 +332,7 @@ To clone the repository:
 
 1. Log in (or sign up) to GitHub.
 
-2. Go to the repository for this project, [BookWorm](https://github.com/kera-cudmore/BookWorm).
+2. Go to the repository for this project, [Titbit](https://github.com/luandretta/titbit).
 
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 
@@ -371,7 +367,7 @@ Please see [TESTING.md](TESTING.md) for all testing performed
 
 ### Content
 
-Content for this project was written by Lucimeri Andretta
+Content for this project was written by me, Lucimeri Andretta. 
 
 ### Media
 
