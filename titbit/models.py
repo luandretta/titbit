@@ -6,6 +6,8 @@ from django.dispatch import receiver
 
 """
 Create a User Profile Model
+List follows and followed by
+Insert date to last update
 """
 class Profile(models.Model):
     user = models.OneToOneField(User,
@@ -20,6 +22,7 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
+
 
 """
 Create Profile when new User signs up
