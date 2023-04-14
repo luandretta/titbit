@@ -36,18 +36,19 @@
                     </p>
                 </div>
             </div>
+            <br/>
+            <form method="POST">
+                {% csrf_token %}
+                {% if profile in user.profile.follows.all %}
+                    <button class="btn btn-outline-danger" name="follow" value="unfollow" type="submit">Unfollow @{{ profile.user.username|lower }} </button>
+                {% else %}
+                <button class="btn btn-outline-secondary" name="follow" value="follow" type="submit">Follow @{{ profile.user.username|lower }} </button>
+                {% endif %}
+            </form>
         </div>
     </div>
 </div>
 
-<form method="POST">
-    {% csrf_token %}
-    {% if profile in user.profile.follows.all %}
-        <button class="btn btn-outline-danger" name="follow" value="unfollow" type="submit">Unfollow @{{ profile.user.username }} </button>
-    {% else %}
-    <button class="btn btn-outline-secondary" name="follow" value="follow" type="submit">Follow @{{ profile.user.username }} </button>
-    {% endif %}
-</form>
 
 {% endif %}
 
