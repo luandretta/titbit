@@ -9,6 +9,7 @@
             <!-- Own profile -->
             <h1> {{ profile.user.username}}'s Profile</h1>
         </div>
+        <br />
         <div class="col-4">
             <!-- Follows -->
             <div class="card">
@@ -17,11 +18,12 @@
                     <p class="card-text">
                         {% for following in profile.follows.all %}
                         <a href="{% url 'profile' following.user.id %}">
-                            @{{ following }}</a><br /><br />
+                            @{{ following }}</a><br />
                         {% endfor%}
                     </p>
                 </div>
             </div>
+            <br /><br />
             <!-- Followed by -->
             <div class="card">
                 <h5 class="card-header">Followed by</h5>
