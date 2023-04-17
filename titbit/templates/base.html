@@ -59,10 +59,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'profile' request.user.id %}">My Profile</a>
                         </li>
-                        {% endif %}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Log Out</a>
+                            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                         </li>
+                        {% else %}
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Login</a>
+                        </li>
+                        {% endif %}
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -99,14 +104,16 @@
         <div class="container">
             <!-- Section: Social media -->
             <div class="mb-1">
-                <p>Get in touch:
-                    <!-- Linkedin -->
-                    <a class="btn btn-floating m-1 link-light" href="https://www.linkedin.com/in/luandretta/"
-                        target="_blank" rel="nofollow" role="button"><i class="fab fa-linkedin-in"></i></a>
-                    <!-- Github -->
-                    <a class="btn btn-floating m-1 link-light" href="https://github.com/luandretta" target="_blank"
-                        rel="nofollow" role="button"><i class="fab fa-github"></i></a>
-                </p>
+                <small class="text-muted">
+                    <p>Get in touch:
+                        <!-- Linkedin -->
+                        <a class="btn btn-floating m-1 link-light" href="https://www.linkedin.com/in/luandretta/"
+                            target="_blank" rel="nofollow" role="button"><i class="fab fa-linkedin-in"></i></a>
+                        <!-- Github -->
+                        <a class="btn btn-floating m-1 link-light" href="https://github.com/luandretta" target="_blank"
+                            rel="nofollow" role="button"><i class="fab fa-github"></i></a>
+                    </p>
+                </small>
             </div>
         </div>
 

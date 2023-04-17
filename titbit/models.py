@@ -18,7 +18,7 @@ class Post(models.Model):
         return (
             f'{self.user} '
             f'({self.created_at:%d-%m-%Y %H:%M}): '
-            f'{self.body}...'
+            f'{self.body}'
         )
 
 

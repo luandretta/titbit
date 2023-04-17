@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Profile, Post
 from .forms import PostForm
+from django.contrib.auth import authenticate, login, logout
 
 
 """
@@ -21,6 +22,7 @@ def home(request):
         posts = Post.objects.all().order_by('-created_at')
         return render(request, 'index.html', {"posts": posts, 'form': form})
     else:
+        posts = Post.objects.all().order_by('-created_at')
         return render(request, 'index.html', {"posts": posts})
 
 
@@ -64,3 +66,18 @@ def profile(request, pk):
     else:
         messages.success(request, ('You must be loggeg in to view this page.'))
         return redirect('home')
+
+
+"""
+Login
+"""
+def login_user(request):
+    return render(request, 'login.html', {})
+
+
+"""
+Logout
+"""
+def logout_user(request):
+    return render(request, 'logout.html', {})
+
