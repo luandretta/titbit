@@ -1,26 +1,32 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-8">
-                <h1>Titbit</h1><br />
+<div class="container text-center">
+    <div class="row">
+        <div class="col-8">
+            <h1>Titbit</h1><br />
 
-                {% for post in posts %}
-                <div class="alert alert-dark" role="alert">
-                    {{ post }}
-                </div>
-                <br /><br />
-                {% endfor %}
+            {% for post in posts %}
+            <div class="alert alert-dark" role="alert">
+                @{{ post.user.username }}: {{ post.body }}<br/>
+                <small class="text-muted">
+                    {{ post.created_at }} 
+                </small>
             </div>
-            <div class="col-4">
-                <br /><br />
-                <form method="POST">
-                    {% csrf_token %}
+            <br /><br />
+            {% endfor %}
+        </div>
+        <div class="col-4">
+            <br /><br />
+            {% if form %}
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
 
-                    <button type="submit" class="btn btn-secondary">Titbit</button>
-                </form>
-            </div>
+                <button type="submit" class="btn btn-secondary">Titbit</button>
+            </form>
+            {% endif %}
         </div>
     </div>
+</div>
 {% endblock %}

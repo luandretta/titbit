@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Profile, Post
+from .forms import PostForm
 
 
 """
@@ -8,8 +9,19 @@ Initial page
 """
 def home(request):
     if request.user.is_authenticated:
+        form = PostForm(request.POST or None)
+        if request.method == 'POST':
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.user = request.user
+                post.save()
+                messages.success(request, ('Your titbit has been posted!'))
+                return redirect('home')
+
         posts = Post.objects.all().order_by('-created_at')
-    return render(request, 'index.html', {"posts":posts})
+        return render(request, 'index.html', {"posts": posts, 'form': form})
+    else:
+        return render(request, 'index.html', {"posts": posts})
 
 
 """
@@ -47,7 +59,8 @@ def profile(request, pk):
             # Save the profile
             current_user_profile.save()
 
-        return render(request, 'profile.html', {'profile': profile, 'posts':posts})
+        return render(request, 'profile.html', {'profile': profile,
+                                                'posts': posts})
     else:
         messages.success(request, ('You must be loggeg in to view this page.'))
         return redirect('home')
