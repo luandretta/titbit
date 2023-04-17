@@ -72,12 +72,26 @@ def profile(request, pk):
 Login
 """
 def login_user(request):
-    return render(request, 'login.html', {})
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            messages.success(request, ('You have been logged in!'))
+            return redirect('home')
+        else:
+            messages.success(request, ('ERROR! Please try again'))
+            return redirect('login')
+    else: 
+        return render(request, 'login.html', {})
 
 
 """
 Logout
 """
 def logout_user(request):
-    return render(request, 'logout.html', {})
+    logout(request)
+    messages.success(request, ('You have been logged out.'))
+    return redirect('home')
 

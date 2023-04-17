@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
-
 {% block content %}
+
+{% if user.is_authenticated %}
+<h1>You're already logged in!</h1>
+
+{% else %}
 <div class="col-md-6 offset-md-3">
 
     <h1>Login</h1><br/>
@@ -18,5 +22,5 @@
     </form>
 
 </div>
-
+{% endif %}
 {% endblock %}
