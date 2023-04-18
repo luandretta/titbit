@@ -65,11 +65,17 @@ Link to deployed site: [Titbit](https://titbit1.herokuapp.com/)
 
 ### Project Goals
 
+- - -
+
+
 The aim of this project was to build a site that allows users to easily sign up and keep up with titbits.
 
 ### User Stories
 
-#### **Persona**
+
+#### Persona
+
+- - -
 
 The target audience for Titbit are:
 * over 18 years;
@@ -82,43 +88,85 @@ The target audience for Titbit are:
 * would like to engage on society.
 
 
-#### **New Site Users**
+#### New Site Users
+
+- - -
 
 As a first time user of the site, I want to be able to:
 
-**Must Have**
+*Must Have*
+
 * understand what the site is for and how to navigate the site, so I can decide wheter or not to sign up.
 * register for an account, so that I can create my profile and explore the website.
+* easily navigate the site, so that I can access what I need at the click of a button.
 
 
 #### **Registered Users**
 
+- - -
+
+
 As a registered user of the site, I want to be able to:
 
-**Must Have**
-* Log in to my account, so that I can access the website.
-* Log out of my account, so that I can end my session.
-* Edit my profile, so that I can update or personalize it.
-* Read the new posts, so that I can keep up to date.
-* Create, edit, delete and view my posts, so that I 
-* Create, edit, delete and view my comments.
-* Like and dislike posts.
-* Reset my password.
-* Change my password.
-* Follow others users.
-* Be followed.
-**Should Have**
 
-**Could Have**
+*Must Have*
 
-**Won't Have**
+* log in to my account, so that I can access the website.
+* log out of my account, so that I can end my session.
+* reset my password, so that I can regain access to my account.
+* edit my profile, so that I can update or personalize it.
+* read the new posts, so that I can keep up to date.
+* create, edit, delete and view my posts, so that I can have control of my content.
+* know the date and time a post was created, so that I can know how new or old the post is.
+* like other people's posts, so that I can let them know I enjoyed their posts.
+* follow others users, so that I can view their posts on my feed.
+* unfollow other users, so that I can remove their post from my feed.
+* be followed, so that I can know that other users read my posts.
+
+
+
+*Should Have*
+
+
+* comment on other people's posts, so that I can further engage with the user and open a discussion.
+* edit or delete my comments on other people's posts, so that I can edit or remove comments I no longer want published.
+* read the comments of posts, so that I can know the thoughts from others users and follow them.
+* like other people's comments on posts, so that I can let them know I enjoyed their comment.
+* search for an user or a content, so that I can find either a specific user or a specific content.
+
+
+
+*Could Have*
+
+* delete other people's comments on my own posts, so that I can remove unwanted commments.
+* reshare other people's posts, so that I can share their thoughts with my followers.
+* message other users, so that I can get in touch with them privately.
+* report posts to admins, so that I can notify inappropriate content.
+* block users, so that I can hide my content from unwanted users.
+ 
+
+
+*Won't Have*
+
+
+* be notified when other users comment or like my posts or follow/unfollow me.
+* call users, so that I can communicate with them more quickly.
+* create communities, so that I can share content by specific theme.
+* write testimonials about other users, so that I can testify about the other users according to the relationship I have with them.
 
 #### **Admin User**
 
+- - -
+
 As an administrator for the site I want to be able to:
 
-* Remove any content that could be offensive.
-* Delete or block users who not respect the rules.
+*Should Have*
+* remove any content from any user that could be offensive, so that I can moderate the all content.
+* access a page only for admins to see flagged user posts, so that I can see a list of posts that possibly need to be deleted.
+* unflag a post if a deletion is not neede, so that I can remove it from the flagged posts list.
+
+*Won't Have*
+* suspend, block or delete users who not respect the rules, so that I can maintain site guidelines.
 
 ### Agile
 The Project Boards on GitHub was used to help to organize and prioritize the tasks.
@@ -374,6 +422,8 @@ Please see [TESTING.md](TESTING.md) for all testing performed
 ### Code Used 🔗
 
 * [](https://) 
+* [Markdown Guide](https://www.markdownguide.org/basic-syntax/) 
+* 
 
 ### Content 📝
 
