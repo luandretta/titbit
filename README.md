@@ -61,7 +61,11 @@ Link to deployed site: [Titbit](https://titbit1.herokuapp.com/)
 
 - - -
 
-## User Experience
+## 📌 User Experience
+<details>
+
+<summary>👇</summary>
+
 
 ### Project Goals
 
@@ -71,6 +75,8 @@ Link to deployed site: [Titbit](https://titbit1.herokuapp.com/)
 The aim of this project was to build a site that allows users to easily sign up and keep up with titbits.
 
 ### User Stories
+
+
 
 
 #### Persona
@@ -88,6 +94,7 @@ The target audience for Titbit are:
 * would like to engage on society.
 
 
+
 #### New Site Users
 
 - - -
@@ -99,6 +106,7 @@ As a first time user of the site, I want to be able to:
 * understand what the site is for and how to navigate the site, so I can decide wheter or not to sign up.
 * register for an account, so that I can create my profile and explore the website.
 * easily navigate the site, so that I can access what I need at the click of a button.
+
 
 
 #### **Registered Users**
@@ -122,13 +130,13 @@ As a registered user of the site, I want to be able to:
 * follow others users, so that I can view their posts on my feed.
 * unfollow other users, so that I can remove their post from my feed.
 * be followed, so that I can know that other users read my posts.
+* view the number of likes on each post, so that I can see which is the most popular or viral.
 
 
 
 *Should Have*
 
-
-* comment on other people's posts, so that I can further engage with the user and open a discussion.
+* comment on other people's posts, so that I can be involved in the conversation.
 * edit or delete my comments on other people's posts, so that I can edit or remove comments I no longer want published.
 * read the comments of posts, so that I can know the thoughts from others users and follow them.
 * like other people's comments on posts, so that I can let them know I enjoyed their comment.
@@ -154,6 +162,8 @@ As a registered user of the site, I want to be able to:
 * create communities, so that I can share content by specific theme.
 * write testimonials about other users, so that I can testify about the other users according to the relationship I have with them.
 
+
+
 #### **Admin User**
 
 - - -
@@ -162,6 +172,8 @@ As an administrator for the site I want to be able to:
 
 *Should Have*
 * remove any content from any user that could be offensive, so that I can moderate the all content.
+
+*Could Have*
 * access a page only for admins to see flagged user posts, so that I can see a list of posts that possibly need to be deleted.
 * unflag a post if a deletion is not neede, so that I can remove it from the flagged posts list.
 
@@ -170,17 +182,22 @@ As an administrator for the site I want to be able to:
 
 ### Agile
 The Project Boards on GitHub was used to help to organize and prioritize the tasks.
-The Kanban, as an agile project management tool, helped to visualize the tasks and limit the work in progress (WIP) by moving cards between the To do, In progress, and Done columns.
+The Kanban, as an agile project management tool, helped to visualize the tasks and limit the work in progress (WIP) by moving cards between the To do, In progress, Testing and Done columns.
 
 #### Burndown Chart
 
 #### User Story Planning
 
 
+</details>
 
-- - -
 
-## Design
+
+## 📝 Design
+- - - 
+
+<details>
+<summary>👇</summary>
 
 ### Colour Scheme
 
@@ -197,6 +214,8 @@ I have used [Montserrat](https://fonts.google.com/specimen/Montserrat?query=mont
 ![Montserrat Font](documentation/montserrat.png)
 
 ### Imagery
+
+* [Emojis](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
 
 
 
@@ -227,15 +246,21 @@ Wireframes were created for mobile, tablet and desktop using Balsamiq.
 
 ### Database Schema & User Journey
 
-#### __User Journey__
+#### **User Journey**
 
 ![User Journey](documentation/user-journey.png)
 
+</details>
 
 
 - - -
 
-## Features
+## ⚙️ Features
+
+- - -
+
+<details>
+<summary>👇</summary>
 
 The website is comprised of X pages which are extended from a base template.
 
@@ -253,11 +278,11 @@ The website is comprised of X pages which are extended from a base template.
 
 * Navbar - The Navbar is displayed on all pages of the website and allows users to navigate the site with ease. The navbar is comprised of a logo, the sites name, links to navigate the site and a search bar. The links on the navbar will vary depending on whether a user is logged into their account.
 
-  __User logged in Navbar__
+  **User logged in Navbar**
   
   ![User logged in Navbar](documentation/logged-in-navbar.png)
 
-  __User not logged in Navbar__
+  **User not logged in Navbar**
 
   ![User not logged in Navbar](documentation/not-loggedin-navbar.png)
 
@@ -293,7 +318,7 @@ The website is comprised of X pages which are extended from a base template.
 
 - - -
 
-### Future Implementations 🧠
+### 🧠 Future Implementations 
 
 In future implementations I would like to:
 
@@ -302,7 +327,7 @@ In future implementations I would like to:
 * Allow admin to be able to delete posts that contain offensive material.
 * Prepopulate the login fields after a user registers on the site and is redirected to the login page - this is good UX as we shouldn't expect a user to fill in the form with information we already have. 
 
-### Accessibility
+### 🗣️ Accessibility
 
 I have been mindful during coding to ensure that the website is as accessible friendly as possible. This has been have achieved by:
 
@@ -311,17 +336,27 @@ I have been mindful during coding to ensure that the website is as accessible fr
 * Providing information for screen readers where there are icons used and no text.
 * Ensuring that there is a sufficient colour contrast throughout the site.
 
+
+</details>
+
 - - -
 
-## Technologies Used  🛠
+## ⚒️ Technologies Used 
 
-### Languages Used
+- - -
+
+
+<details>
+<summary>👇</summary>
+
+
+### 🌎 Languages Used
 
 HTML, CSS, Javascript, Python
 
 ### Databases Used
 
-[ElephantSQL](https://www.elephantsql.com/) - See [Database Migration to ElephantSQL](#database-migration-to-elephantsql) section for more information.
+[🐘 ElephantSQL](https://www.elephantsql.com/) - See [Database Migration to ElephantSQL](#database-migration-to-elephantsql) section for more information.
 
 [Cloudinary]
 
@@ -356,19 +391,29 @@ HTML, CSS, Javascript, Python
 
 
 
-### Error Handling 
+### 🚨 Error Handling 
+
+- - - 
 
 While researching the best way to handle errors in a Flask application using blueprints I came across the following [article](https://nrodrig1.medium.com/flask-blueprints-error-handling-and-config-file-example-d1a031070763). I really liked how this solution allowed me to create a blueprint to custom handle a number of different errors, rather than just creating a single 404 error page.
 
 ### Defensive Programming
 
+- - - 
 
 ### Database Migration to ElephantSQL
 
 
 - - -
+</details>
 
-## Deployment & Local Development 👩‍💻 
+
+## 👩‍💻 Deployment & Local Development
+
+- - -
+<details>
+<summary>👇</summary>
+
 
 ### Deployment
 
@@ -410,22 +455,35 @@ To clone the repository:
     pip3 install -r requirements.txt
     ```
 
+</details>
+
 - - -
 
-## Testing 💬
+## 💬 Testing 
+
+- - -
 
 Please see [TESTING.md](TESTING.md) for all testing performed
 - - -
 
-## Credits 🤔
+## ®️ Credits 
 
-### Code Used 🔗
+- - -
 
-* [](https://) 
-* [Markdown Guide](https://www.markdownguide.org/basic-syntax/) 
-* 
+<details> 
+<summary>👇</summary>
 
-### Content 📝
+### 🔗 Code Used 
+
+* []()
+* [Code Institute](https://learn.codeinstitute.net/)
+* [How to ...? - Stack Overflow](https://stackoverflow.com/)
+* [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections) 
+* [Markdown Guide](https://www.markdownguide.org/basic-syntax/)
+* [Bootstrap](https://getbootstrap.com/docs/5.3/forms/overview/) 
+* [Bootstrap](https://mdbootstrap.com/docs/standard/content-styles/colors/) 
+
+### 📝 Content 
 
 Content for this project was written by me, Lucimeri Andretta. 
 
@@ -433,9 +491,10 @@ Content for this project was written by me, Lucimeri Andretta.
 
 * 
 
-### Acknowledgments 👋
+### 👋 Acknowledgments 
 
-I would like to acknowledge the following people who helped me along the way in completing this project:
+I would like to acknowledge the following people who helped me along the way in completing this project: 🫶
 
+</details>
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
