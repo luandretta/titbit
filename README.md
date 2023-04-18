@@ -4,7 +4,8 @@
 
 ![Titbit](documentation/###.png)
 
-Titbit is  a free social networking site where users broadcast short posts, where each user can create his own post and also like and comment on other users' posts.
+Titbit is  a free social networking site where users broadcast short posts, where each user can create his own post, read, update and delete it, and also like/dislike posts from others users.
+
 
 Link to deployed site: [Titbit](https://titbit1.herokuapp.com/)
 
@@ -13,7 +14,7 @@ Link to deployed site: [Titbit](https://titbit1.herokuapp.com/)
 ![GitHub language count](https://img.shields.io/github/languages/count/luandretta/titbit?style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/luandretta/titbit?style=for-the-badge)
 
-## CONTENTS
+## 🚀 CONTENTS
 
 * [User Experience](#user-experience)
   * [Project Goals](#project-goals)
@@ -64,46 +65,55 @@ Link to deployed site: [Titbit](https://titbit1.herokuapp.com/)
 
 ### Project Goals
 
-
+The aim of this project was to build a site that allows users to easily sign up and keep up with titbits.
 
 ### User Stories
 
-#### __Persona__
+#### **Persona**
 
 The target audience for Titbit are:
 * over 18 years;
 * titbit lovers all around the world;
 * would like to stay informed;
-* would like to promote courses;
+* would like to promote something;
 * would like to share informations or their thoughts on social media;
 * would like to influence people;
 * wants to make jokes;
 * would like to engage on society.
 
 
-#### __First Time Visitor Goals__
+#### **New Site Users**
 
-As a first time user of the site I want to be able to:
+As a first time user of the site, I want to be able to:
 
-* Understand what the site is for and how to navigate the site.
-* Register for an account.
+**Must Have**
+* understand what the site is for and how to navigate the site, so I can decide wheter or not to sign up.
+* register for an account, so that I can create my profile and explore the website.
 
 
-#### __Returning Visitor Goals__
+#### **Registered Users**
 
-As a returning registered user of the site I want to be able to:
+As a registered user of the site, I want to be able to:
 
-* Log in to my account.
-* Read the new posts.
-* Create, edit, delete and view my posts.
+**Must Have**
+* Log in to my account, so that I can access the website.
+* Log out of my account, so that I can end my session.
+* Edit my profile, so that I can update or personalize it.
+* Read the new posts, so that I can keep up to date.
+* Create, edit, delete and view my posts, so that I 
 * Create, edit, delete and view my comments.
 * Like and dislike posts.
 * Reset my password.
 * Change my password.
 * Follow others users.
 * Be followed.
+**Should Have**
 
-#### __Admin User__
+**Could Have**
+
+**Won't Have**
+
+#### **Admin User**
 
 As an administrator for the site I want to be able to:
 
@@ -235,7 +245,7 @@ The website is comprised of X pages which are extended from a base template.
 
 - - -
 
-### Future Implementations
+### Future Implementations 🧠
 
 In future implementations I would like to:
 
@@ -255,7 +265,7 @@ I have been mindful during coding to ensure that the website is as accessible fr
 
 - - -
 
-## Technologies Used
+## Technologies Used  🛠
 
 ### Languages Used
 
@@ -276,7 +286,7 @@ HTML, CSS, Javascript, Python
 ### Libraries & Packages Used
 
 
-### Programs Used
+### Programs Used 
 
 [Pip](https://pypi.org/project/pip/) - Tool for installing python packages.
 
@@ -298,7 +308,7 @@ HTML, CSS, Javascript, Python
 
 
 
-### Error Handling
+### Error Handling 
 
 While researching the best way to handle errors in a Flask application using blueprints I came across the following [article](https://nrodrig1.medium.com/flask-blueprints-error-handling-and-config-file-example-d1a031070763). I really liked how this solution allowed me to create a blueprint to custom handle a number of different errors, rather than just creating a single 404 error page.
 
@@ -310,7 +320,7 @@ While researching the best way to handle errors in a Flask application using blu
 
 - - -
 
-## Deployment & Local Development
+## Deployment & Local Development 👩‍💻 
 
 ### Deployment
 
@@ -354,18 +364,18 @@ To clone the repository:
 
 - - -
 
-## Testing
+## Testing 💬
 
 Please see [TESTING.md](TESTING.md) for all testing performed
 - - -
 
-## Credits
+## Credits 🤔
 
-### Code Used
+### Code Used 🔗
 
 * [](https://) 
 
-### Content
+### Content 📝
 
 Content for this project was written by me, Lucimeri Andretta. 
 
@@ -373,7 +383,7 @@ Content for this project was written by me, Lucimeri Andretta.
 
 * 
 
-### Acknowledgments
+### Acknowledgments 👋
 
 I would like to acknowledge the following people who helped me along the way in completing this project:
 
