@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Profile, Post
-from .forms import PostForm
+from .forms import PostForm, SignUpForm
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import UserCreationForm
+from django import forms
 
 
 """
@@ -95,3 +97,24 @@ def logout_user(request):
     messages.success(request, ('You have been logged out.'))
     return redirect('home')
 
+
+"""
+Register
+"""
+def register_user(request):
+    form = SignUpForm()
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
+            first_name = form.cleaned_data['first_name']
+            last_name = form.cleaned_data['last_name']
+            email = form.cleaned_data['email']
+            # Log in user
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            messages.success(request, 'Welcome! You have successfully registered!')
+            
+    return render(request, 'register.html', {'form':form})
