@@ -5,21 +5,29 @@
 <h1>You're already logged in!</h1>
 
 {% else %}
-<div class="col-md-6 offset-md-3">
+<div class="container">
+    <div class="row h-100">
+        <div class="col col-lg-6 col-md-8 col-sm-12 m-auto p-3">
+            <div class="card border-0">
+                <h1>Login</h1><br />
+                <form method="POST" action="{% url 'login' %}">
+                    {% csrf_token %}
 
-    <h1>Login</h1><br/>
-    <form method="POST" action="{% url 'login' %}">
-        {% csrf_token %}
-
-        <div class="mb-3">
-            <input type="text" class="form-control" name="username" placeholder="Your username" aria-describedby="Your Username">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="username" placeholder="Your username"
+                            aria-describedby="Your Username">
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" name="password" placeholder="Your password"
+                            aria-describedby="Your password">
+                    </div>
+                    <br />
+                    <button type="submit" class="btn btn-secondary">Submit</button>
+                </form><br /><br />
+            </div>
         </div>
-        <div class="mb-3">
-            <input type="password" class="form-control" name="password" placeholder="Your password" aria-describedby="Your password">
-        </div>
-        <br/>
-        <button type="submit" class="btn btn-secondary">Submit</button>
-    </form><br/><br/>
+    </div>
 </div>
+
 {% endif %}
 {% endblock %}

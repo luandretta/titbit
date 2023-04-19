@@ -21,6 +21,7 @@
             {% endif %}
         </div>
         <br/>
+        <!--Follow and unfollow -->
         <div class="col-4">
             <br/><br/>
             <!-- Follows -->
@@ -52,13 +53,18 @@
             <form method="POST">
                 {% csrf_token %}
                 {% if profile in user.profile.follows.all %}
-                <button class="btn btn-outline-danger" name="follow" value="unfollow" type="submit">Unfollow
+                <button class="btn btn-danger" name="follow" value="unfollow" type="submit">Unfollow
                     @{{ profile.user.username|lower }} </button>
                 {% else %}
-                <button class="btn btn-outline-secondary" name="follow" value="follow" type="submit">Follow
+                <button class="btn btn-secondary" name="follow" value="follow" type="submit">Follow
                     @{{ profile.user.username|lower }} </button>
                 {% endif %}
             </form>
+            <br/>
+            <!-- Update profile only in own profile page -->
+            {% if request.user.id == profile.user.id %}
+            <a href="{% url 'update_user' %}" class="btn btn-secondary">Update Profile</a>
+            {% endif %}
         </div>
     </div>
 </div>

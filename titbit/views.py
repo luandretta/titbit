@@ -4,6 +4,7 @@ from .models import Profile, Post
 from .forms import PostForm, SignUpForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from django import forms
 
 
@@ -95,7 +96,7 @@ Logout
 def logout_user(request):
     logout(request)
     messages.success(request, ('You have been logged out.'))
-    return redirect('home')
+    return redirect('login')
 
 
 """
@@ -109,12 +110,26 @@ def register_user(request):
             form.save()
             username = form.cleaned_data['username']
             password = form.cleaned_data['password1']
-            first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name']
-            email = form.cleaned_data['email']
             # Log in user
             user = authenticate(username=username, password=password)
             login(request, user)
             messages.success(request, 'Welcome! You have successfully registered!')
-            
+            return redirect('home')
+
     return render(request, 'register.html', {'form':form})
+
+
+def update_user(request):
+    if request.user.is_authenticated:
+        current_user = User.objects.get(id=request.user.id)
+        form = SignUpForm(request.POST or None, instance=current_user)
+        if form.is_valid():
+            form.save()
+            login(request, current_user)
+            messages.success(request, 'Great! Your profile has been updated!')
+            return redirect('home')
+
+        return render(request, 'update_user.html', {'form':form})
+    else:
+        messages.success(request, 'You must be loggeg in to view this page.')
+        return redirect('home')

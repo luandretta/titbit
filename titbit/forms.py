@@ -9,9 +9,10 @@ class PostForm(forms.ModelForm):
     Form to write a new post
     Add bootstrap classes
     """
-    body = forms.CharField(required=True,
+    body = forms.CharField(required=True, max_length=200,
         widget=forms.widgets.Textarea(
             attrs={
+                'row': 3,
                 'placeholder': 'Share your titbit!',
                 'class': 'form-control',
             }
