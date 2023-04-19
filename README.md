@@ -476,8 +476,12 @@ Please see [TESTING.md](TESTING.md) for all testing performed
 ### 🔗 Code Used 
 
 * []()
-* [Code Institute](https://learn.codeinstitute.net/)
+
 * [How to ...? - Stack Overflow](https://stackoverflow.com/)
+  * [Is it possible to break a long line to multiple lines in Python?](https://stackoverflow.com/questions/4172448/is-it-possible-to-break-a-long-line-to-multiple-lines-in-python)
+  * [Bootstrap sticky footer overlapping content](https://stackoverflow.com/questions/26336190/bootstrap-sticky-footer-overlapping-content)
+
+* [Code Institute](https://learn.codeinstitute.net/)
 * [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections) 
 * [Markdown Guide](https://www.markdownguide.org/basic-syntax/)
 * [Bootstrap](https://getbootstrap.com/docs/5.3/forms/overview/) 

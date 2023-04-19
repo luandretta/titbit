@@ -79,35 +79,28 @@
             </div>
         </nav>
     </header>
-    <!-- Container for content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <!-- Messages -->
-                {% if messages %}
-                    {% for message in messages %}
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    {% endfor %}
 
-                {% endif %}
-
-                {% block content %}
-                <!-- Content Goes here -->
-                {% endblock content %}
-            </div>
-        </div>
+    <!-- Messages -->
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
+    {% endfor %}
+
+    {% endif %}
+
+    {% block content %}
+    <!-- Content Goes here -->
+    {% endblock content %}
+
     <!-- Footer -->
-    <footer class="text-center fixed-bottom text-light bg-dark">
+    <footer class="text-center text-light bg-dark p-3">
         <!-- Grid container -->
         <div class="row">
             <div class="col-md-8 offset-md-2">
-
                 <!-- Section: Social media -->
-
                 <p>Get in touch:
                     <!-- Linkedin -->
                     <a class="btn btn-floating m-1 link-light" href="https://www.linkedin.com/in/luandretta/"
@@ -121,7 +114,8 @@
                 <small class="text-muted">
                     <p>
                         Developed By <a href="https://github.com/luandretta" target="_blank" rel="nofollow">Lucimeri
-                            Andretta</a> for Code Institute's Portfolio Project 4 - 2023
+                            Andretta
+                        </a> for Code Institute's Portfolio Project 4 - 2023
                     </p>
                 </small>
             </div>

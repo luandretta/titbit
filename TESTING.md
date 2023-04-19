@@ -35,3 +35,5 @@ python manage.py migrate sessions
       --> pip install psycopg2-binary
 
 4. Create virtual enviroment  - source virt/bin/activate
+
+5. Sticky footer overlapping content - Remove class fixed-sm-bottom

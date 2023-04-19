@@ -3,12 +3,12 @@
 
 <div class="col-md-6 offset-md-3">
 
-    <h1>Register</h1><br />
+    <h1>Register</h1><br/>
     <form method="POST" action="">
         {% csrf_token %}
         {{ form.as_p }}
         <br/>
-        <button type="submit" class="btn btn-secondary">Register</button>
+        <button type="submit" class="btn btn-secondary">Register</button><br/><br/>
     </form>
 </div>
 {% endblock %}
