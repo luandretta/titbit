@@ -1,8 +1,18 @@
 from django import forms
-from .models import Post
+from .models import Post, Profile
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
+
+class PictureForm(forms.ModelForm):
+    """
+    Form to upload profile picture
+    """
+    profile_picture = forms.ImageField(label="Profile picture")
+
+    class Meta:
+        model = Profile
+        fields = ('profile_picture', )
 
 class PostForm(forms.ModelForm):
     """

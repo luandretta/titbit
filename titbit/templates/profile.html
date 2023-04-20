@@ -29,7 +29,7 @@
             <img src="{{ profile.profile_picture.url }}">
             {% endif %}
             <br/><br/>
-            
+
             <!-- Follows -->
             <div class="card">
                 <h5 class="card-header">Follows</h5>
@@ -67,7 +67,7 @@
                 {% endif %}
             </form>
             <br/>
-            <!-- Update profile only in own profile page -->
+            <!-- Update profile button only in own profile page -->
             {% if request.user.id == profile.user.id %}
             <a href="{% url 'update_user' %}" class="btn btn-secondary">Update Profile</a>
             {% endif %}
