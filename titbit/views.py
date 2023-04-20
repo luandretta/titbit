@@ -116,7 +116,7 @@ def register_user(request):
             messages.success(request, 'Welcome! You have successfully registered!')
             return redirect('home')
 
-    return render(request, 'register.html', {'form':form})
+    return render(request, 'register.html', {'form': form})
 
 
 def update_user(request):
@@ -127,16 +127,18 @@ def update_user(request):
         profile_user = Profile.objects.get(user_id=request.user.id)
         # Get forms
         user_form = SignUpForm(request.POST or None, request.FILES or None, instance=current_user)
-        profile_form = PictureForm(request.POST or None, request.FILES or None, instance=profile_user)
+        profile_form = PictureForm(request.POST or None, 
+                                request.FILES or None, instance=profile_user)
 
-        if user_form.is_valid() and profile_user.is_valid():
+        if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_user.save()
             login(request, current_user)
             messages.success(request, 'Great! Your profile has been updated!')
             return redirect('home')
 
-        return render(request, 'update_user.html', {'user_form':user_form, 'profile_form':profile_form})
+        return render(request, 'update_user.html', {'user_form': user_form,
+                    'profile_form': profile_form})
     else:
         messages.success(request, 'You must be loggeg in to view this page.')
         return redirect('home')
