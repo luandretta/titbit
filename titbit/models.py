@@ -26,6 +26,7 @@ class Post(models.Model):
 Create a User Profile Model
 List follows and followed by
 Insert date to last update
+Insert profile picture
 """
 class Profile(models.Model):
     user = models.OneToOneField(User,
@@ -37,6 +38,9 @@ class Profile(models.Model):
                                     blank=True)
 
     date_modified = models.DateTimeField(User, auto_now=True)
+    # Profile picture
+    profile_picture = models.ImageField(null=True, blank=True,
+                                        upload_to="images/")
 
     def __str__(self):
         return self.user.username

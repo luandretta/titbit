@@ -37,3 +37,9 @@ python manage.py migrate sessions
 4. Create virtual enviroment  - source virt/bin/activate
 
 5. Sticky footer overlapping content - Remove class fixed-sm-bottom
+
+6. As the profile picture model was created :
+ERRORS:
+titbit.Profile.profile_picture: (fields.E210) Cannot use ImageField because Pillow is not installed.
+        HINT: Get Pillow at https://pypi.org/project/Pillow/ or run command "python -m pip install Pillow".
+solved: python -m pip install Pillow 

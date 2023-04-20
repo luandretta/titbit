@@ -21,9 +21,15 @@
             {% endif %}
         </div>
         <br/>
-        <!--Follow and unfollow -->
+        <!--Picture, follow and unfollow -->
         <div class="col-4">
             <br/><br/>
+            <!-- Profile Picture-->
+            {% if profile.profile_picture  %}
+            <img src="{{ profile.profile_picture.url }}">
+            {% endif %}
+            <br/><br/>
+            
             <!-- Follows -->
             <div class="card">
                 <h5 class="card-header">Follows</h5>
@@ -36,7 +42,7 @@
                     </p>
                 </div>
             </div>
-            <br /><br />
+            <br/><br/>
             <!-- Followed by -->
             <div class="card">
                 <h5 class="card-header">Followed by</h5>
@@ -44,12 +50,12 @@
                     <p class="card-text">
                         {% for following in profile.followed_by.all %}
                         <a href="{% url 'profile' following.user.id %}">
-                            @{{ following }}</a><br />
+                            @{{ following }}</a><br/>
                         {% endfor%}
                     </p>
                 </div>
             </div>
-            <br />
+            <br/>
             <form method="POST">
                 {% csrf_token %}
                 {% if profile in user.profile.follows.all %}
