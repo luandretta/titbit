@@ -11,13 +11,19 @@
             <h1> {{ profile.user.username}}'s Profile</h1><br />
             {% if posts %}
             {% for post in posts %}
-            <div class="container">
-                <div class="row">
-                    <div class="col-1">
-                        Thing
-                    </div>
-                    <div class="col-11">
-                        <div class="alert alert-dark" role="alert">
+            <div class="alert alert-dark" role="alert">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-1">
+                            {% if profile.profile_picture %}
+                            <img src="{{ profile.profile_picture.url }}" width="50" height="50" class="rounded-circle"
+                                alt="{{ profile.user.username }}">
+                            {% else %}
+                            <img src="{% static 'images/user.png' %}" alt="{{profile.user.username}}"
+                                class="img-fluid rounded-start">
+                            {% endif %}
+                        </div>
+                        <div class="col-11">
                             @{{ post.user.username }}: {{ post.body }}<br />
                             <small class="text-muted">
                                 {{ post.created_at }}
@@ -26,7 +32,6 @@
                     </div>
                 </div>
             </div>
-
             <br /><br />
             {% endfor %}
             {% endif %}

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 <div class="container text-center">
     <div class="row">
@@ -10,17 +10,37 @@
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit" class="btn btn-secondary">Post</button>
-            </form><br/>
+            </form><br />
             {% endif %}
 
             {% for post in posts %}
             <div class="alert alert-dark" role="alert">
-                @{{ post.user.username }}: {{ post.body }}<br/>
-                <small class="text-muted">
-                    {{ post.created_at }} 
-                </small>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-1">
+                            {% if post.user.profile.profile_picture %}
+                            <img src="{{ post.user.profile.profile_picture.url }}" width="50" height="50" class="rounded-circle"
+                                alt="{{ profile.user.username }}">
+                            {% else %}
+                            <img src="{% static 'images/user.png' %}" alt="{{profile.user.username}}"
+                                class="img-fluid rounded-start">
+                            {% endif %}
+                        </div>
+                        <div class="col-11">
+                            @{{ post.user.username }}: {{ post.body }}<br />
+                            <small class="text-muted">
+                                {{ post.created_at }} - {{ post.number_of_likes }} Likes - 
+
+                                {% if user in post.likes.all %}
+                                <a href="{% url 'post_like' post.id %}">Unlike</a>
+                                {% else %}
+                                <a href="{% url 'post_like' post.id %}">Like</a>
+                                {% endif %}
+                            </small>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <br/>
             {% endfor %}
         </div>
     </div>

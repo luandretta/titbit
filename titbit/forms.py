@@ -19,19 +19,19 @@ class PostForm(forms.ModelForm):
     Form to write a new post
     Add bootstrap classes
     """
-    body = forms.CharField(required=True, max_length=200,
+    body = forms.CharField(required=True, max_length=250,
         widget=forms.widgets.Textarea(
             attrs={
-                'row': 3,
                 'placeholder': 'Share your titbit!',
                 'class': 'form-control',
+                'rows': 3,
             }
         ),
         label='')
 
     class Meta:
         model = Post
-        exclude = ('user', )
+        exclude = ('user', 'likes')
 
 
 class SignUpForm(UserCreationForm):

@@ -4,15 +4,22 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 
-"""
-Create Post Model with date
-"""
 class Post(models.Model):
+    """
+    Create Post Model with time
+    Like/Unlike
+    """
     user = models.ForeignKey(
         User, related_name='posts',
         on_delete=models.CASCADE)
     body = models.CharField(max_length=250)
+    # Time
     created_at = models.DateTimeField(auto_now_add=True)
+    # Likes
+    likes = models.ManyToManyField(User, related_name='post_like', blank=True)
+    # Count the likes
+    def number_of_likes(self):
+        return self.likes.count()
 
     def __str__(self):
         return (
@@ -22,13 +29,13 @@ class Post(models.Model):
         )
 
 
-"""
-Create a User Profile Model
-List follows and followed by
-Insert date to last update
-Insert profile picture
-"""
 class Profile(models.Model):
+    """
+    Create a User Profile Model
+    List follows and followed by
+    Insert date to last update
+    Insert profile picture
+    """
     user = models.OneToOneField(User,
                                 related_name="profile",
                                 on_delete=models.CASCADE)
@@ -46,11 +53,11 @@ class Profile(models.Model):
         return self.user.username
 
 
-"""
-Create Profile when new User signs up
-"""
 @receiver(post_save, sender=User)
 def create_profile(sender, instance, created, **kwargs):
+    """
+    Create Profile when new User signs up
+    """
     if created:
         user_profile = Profile(user=instance)
         user_profile.save()
